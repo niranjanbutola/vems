@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Vulnerable Employee Management System | VEMS by niranjanbutola</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Vulnerable Employee Management System | VEMS</h1>
+        <h2>VEMS is a deliberately created vulnerable application which can be used to learn and perform different web based attacks. It is a JAVA based web application using Java Server Pages (JSP) as server side scripting language and Oracle XE as database. </h2>
+        <a href="https://github.com/niranjanbutola/vems" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="vulnerable-employee-management-system-vems" class="anchor" href="#vulnerable-employee-management-system-vems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Vulnerable Employee Management System (VEMS)</h1>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>VEMS is a deliberately created vulnerable application which can be used to learn and perform different web based attacks. It is a JAVA based web application using Java Server Pages (JSP) as server side scripting language and Oracle XE as database. </p>
+
+<h2>
+<a id="user-roles" class="anchor" href="#user-roles" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User Roles</h2>
+
+<p>VEMS 1.0 consist of three different type of users</p>
+
+<ul>
+<li>Super Admin</li>
+<li>Admin</li>
+<li>User</li>
+</ul>
+
+<p><strong>Super Admin</strong>: -  This user has highest level of privilege and can perform following operations:-</p>
+
+<ul>
+<li>
+<strong>Profile</strong>
+
+<ul>
+<li>View Own Profile</li>
+<li>Edit Own Profile</li>
+<li>Change Own Password</li>
+<li>Change Own Security Question</li>
+<li>Upload Own Profile Pic</li>
+</ul>
+</li>
+<li>
+<strong>Users</strong>
+
+<ul>
+<li>Assign Project to a User</li>
+<li>Un-Assign Project to a User</li>
+<li>View All User</li>
+<li>View Other User</li>
+<li>Edit Other User</li>
+</ul>
+</li>
+<li>
+<strong>Projects</strong>
+
+<ul>
+<li>Add Project </li>
+<li>View All Project</li>
+<li>View Specific Project</li>
+<li>Edit Project Details</li>
+</ul>
+</li>
+<li>
+<strong>Dashboard</strong>
+
+<ul>
+<li>Grant Access to User</li>
+<li>Revoke Access from User</li>
+<li>Reset Other User’s Password </li>
+</ul>
+</li>
+<li><strong>Sign Out</strong></li>
+</ul>
+
+<p><strong>Admin</strong>: - This is an admin user and can perform following operations:-   </p>
+
+<ul>
+<li>
+<strong>Profile</strong>
+
+<ul>
+<li>View Own Profile</li>
+<li>Edit Own Profile</li>
+<li>Change Own Password</li>
+<li>Change Own Security Question</li>
+<li>Upload Own Profile Pic</li>
+</ul>
+</li>
+<li>
+<strong>Users</strong>
+
+<ul>
+<li>Assign Project to a User</li>
+<li>Un-Assign Project to a User</li>
+<li>View All User</li>
+<li>View Other User</li>
+<li>Edit Other User</li>
+</ul>
+</li>
+<li>
+<strong>Projects</strong>
+
+<ul>
+<li>Add Project </li>
+<li>View All Project</li>
+<li>View Specific Project</li>
+<li>Edit Project Details</li>
+</ul>
+</li>
+<li><strong>Sign Out</strong></li>
+</ul>
+
+<p><strong>User</strong>: - This user has least privilege and can perform following operations:-    </p>
+
+<ul>
+<li>
+<strong>Profile</strong>
+
+<ul>
+<li>View Own Profile</li>
+<li>Edit Own Profile</li>
+<li>Change Own Password</li>
+<li>Change Own Security Question</li>
+<li>Upload Own Profile Pic</li>
+</ul>
+</li>
+<li><strong>Sign Out</strong></li>
+</ul>
+
+<h2>
+<a id="database-structure" class="anchor" href="#database-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Database Structure</h2>
+
+<p>VEMS 1.0 consist of three tables</p>
+
+<ul>
+<li>
+<strong>Users</strong>
+
+<ul>
+<li>Username</li>
+<li>Email</li>
+<li>password</li>
+<li>firstname </li>
+<li>lastname </li>
+<li>contactnumber</li>
+<li>mailingaddress</li>
+<li>securityquestion</li>
+<li>securityanswer</li>
+<li>profilepic</li>
+<li>role</li>
+<li>status</li>
+</ul>
+</li>
+<li>
+<strong>Projects</strong>
+
+<ul>
+<li>projectId</li>
+<li>ProjectName</li>
+<li>Start Date</li>
+<li>enddata</li>
+</ul>
+</li>
+<li>
+<strong>UserProjectMapping</strong>
+
+<ul>
+<li>username</li>
+<li>projectId</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="configuration" class="anchor" href="#configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuration</h2>
+
+<ul>
+<li>Run following database queries before running the application:- 
+
+<ul>
+<li>create table users (username varchar2(100),email varchar2(100),password varchar2(100),firstname varchar2(100),lastname varchar2(100),contactnumber varchar2(100),mailingaddress varchar2(100),securityquestion varchar2(100),securityanswer varchar2(100),profilepic varchar2(100),role varchar2(100),status varchar2(50))</li>
+<li>create table projects (projectid varchar2(100),projectname varchar2(100),startdate varchar2(100),enddate varchar2(100))</li>
+<li>create table UserProjectMapping (username varchar2(100),projectid varchar2(100))</li>
+</ul>
+</li>
+<li>Update the deployment descriptor (web.xml) file as per your database configuration. It can be found inside WEB-INF folder. Default values are :-<br>
+
+<ul>
+<li>dbUserName = hr</li>
+<li>dbPassword = asdf</li>
+<li>jdbcDriver = oracle.jdbc.driver.OracleDriver</li>
+<li>urlString = jdbc:oracle:thin:<a href="https://github.com/localhost" class="user-mention">@localhost</a>:1521:XE</li>
+</ul>
+</li>
+<li>All external libraries can be found in WEB-INF/lib folder.</li>
+<li>All images (Profile Pic) will get uploaded in upload directory.</li>
+</ul>
+
+<p><strong>NOTE:-</strong> To use this application, user first need to create a “Super Admin” account manually. This can be done easily using above given SQL queries. </p>
+
+<p><strong>NOTE:-</strong>  For successful login value for status column should be “1”.</p>
+
+<p><strong>NOTE:-</strong> While creating super admin account value for role column should be “Super Admin”. </p>
+
+<p><strong>NOTE:-</strong> SQL backup can be found in “sql backup” folder.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/niranjanbutola/vems/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/niranjanbutola/vems/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/niranjanbutola/vems"></a> is maintained by <a href="https://github.com/niranjanbutola">niranjanbutola</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>

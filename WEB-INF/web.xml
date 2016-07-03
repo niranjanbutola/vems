@@ -1,0 +1,35 @@
+<web-app>
+	<context-param>
+		<param-name>dbUserName</param-name>
+		<param-value>hr</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>dbPassword</param-name>
+		<param-value>asdf</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>jdbcDriver</param-name>
+		<param-value>oracle.jdbc.driver.OracleDriver</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>urlString</param-name>
+		<param-value>jdbc:oracle:thin:@localhost:1521:XE</param-value>
+	</context-param>
+	
+
+	  <servlet>
+		<display-name>FileUploadServlet</display-name>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<servlet-class>FileUploadServlet</servlet-class>
+	  </servlet>
+	  
+	  <servlet-mapping>
+		<servlet-name>FileUploadServlet</servlet-name>
+		<url-pattern>/uploadFile</url-pattern>
+	  </servlet-mapping>
+		
+	
+</web-app>
